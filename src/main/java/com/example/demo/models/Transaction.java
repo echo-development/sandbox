@@ -1,11 +1,18 @@
 package com.example.demo.models;
 
+import com.wordnik.swagger.annotations.ApiModel;
+import com.wordnik.swagger.annotations.ApiModelProperty;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
+@ApiModel(description = "All details about a transaction. ")
 public class Transaction {
+    @ApiModelProperty(notes = "Transaction description")
     private String description;
+    @ApiModelProperty(notes = "Date of transaction")
     private Date timestamp;
+    @ApiModelProperty(notes = "Transaction cost")
     private BigDecimal transactionCost;
 
     public String getDescription() {
